@@ -28,6 +28,11 @@ canvas.addEventListener("click", (e) => {
   ctx.fillText("文字", x, y);
 });
 
+// 文字を描く
+ctx.fillStyle = "#000";      // 文字の色
+ctx.font = "24px sans-serif"; // フォントサイズと種類
+ctx.fillText("Hello SynchroCanvas!", 20, 40); // (文字, x座標, y座標)
+
 let drawing = false;
 
 canvas.addEventListener("mousedown", () => drawing = true);
