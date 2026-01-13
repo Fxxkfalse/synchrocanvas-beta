@@ -19,6 +19,15 @@ const drawRef = ref(db, "draws");
 const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
 
+canvas.addEventListener("click", (e) => {
+  const x = e.offsetX;
+  const y = e.offsetY;
+
+  ctx.fillStyle = "#000";
+  ctx.font = "20px sans-serif";
+  ctx.fillText("文字", x, y);
+});
+
 let drawing = false;
 
 canvas.addEventListener("mousedown", () => drawing = true);
